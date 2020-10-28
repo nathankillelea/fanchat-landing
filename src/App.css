@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: local('Roboto-Regular'), url(./assets/fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: local('Roboto-Bold'), url(./assets/fonts/Roboto-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'RobotoCondensed-Regular';
+  src: local('RobotoCondensed-Regular'), url(./assets/fonts/RobotoCondensed-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'RobotoCondensed-Bold';
+  src: local('RobotoCondensed-Bold'), url(./assets/fonts/RobotoCondensed-Bold.ttf) format('truetype');
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 48px;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  height: 100%;
+  width: 100vw;
+  background-image: url('./assets/background.jpeg');
+  background-position: center;
+  background-size: cover;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  transform: scale(1.1);
+}
+
+header {
+  margin-bottom: 48px;
+}
+
+h1 {
+  font-family: 'RobotoCondensed-Regular';
+  font-size: 54px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+strong {
+  font-family: 'RobotoCondensed-Bold';
+}
+
+.formContainer {
+  display: flex;
+  width: 80%
+}
+
+input {
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #FFFFFF;
+  color: #898989;
+  margin-right: 4px;
+  font-family: 'RobotoCondensed-Regular';
+  font-size: 14px;
+  width: calc(100%/1.5);
+}
+
+button {
+  border-radius: 4px;
+  background-color: #FF2020;
+  padding: 8px;
+  color: #FFFFFF;
+  font-family: 'RobotoCondensed-Regular';
+  font-size: 14px;
+  width: calc(100%/3);
+  white-space: nowrap;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.errorText {
+  color: #FF2020;
+  font-size: 14px;
+  font-family: 'RobotoCondensed-Regular';
+}
+
+.registeredText {
+  font-size: 20px;
+  font-family: 'RobotoCondensed-Regular';
+  text-align: center;
+}
+
+@media only screen and (max-width: 680px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  h1 {
+    font-size: 24px;
+  }
+  .formContainer {
+    width: 100%;
+  }
+}

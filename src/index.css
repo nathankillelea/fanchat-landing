@@ -1,0 +1,9 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+}
