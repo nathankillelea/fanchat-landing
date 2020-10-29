@@ -72,28 +72,6 @@
   display: none;
 }
 
-/*
-.imageContainer {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  top: 50%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  transform: skewY(-11deg);
-}
-
-.tilt {
-  position: absolute;
-  right: 24px;
-  top: 0;
-  max-height: 50%;
-  width: auto;
-  transform: skewY(11deg) scale(1.5);;
-}
-*/
-
 header {
   margin-bottom: 48px;
 }
@@ -147,9 +125,14 @@ button:hover {
 }
 
 .errorText {
-  color: #FF2020;
+  color: #FFFFFF;
   font-size: 14px;
   font-family: 'RobotoCondensed-Regular';
+  align-self: flex-start;
+}
+
+.errorContainer {
+  width: 80%;
 }
 
 .registeredContainer {
@@ -277,5 +260,8 @@ button:hover {
   }
   .registeredContainer {
     max-width: 100%;
+  }
+  .errorContainer {
+    width: 100%;
   }
 }

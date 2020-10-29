@@ -56,24 +56,28 @@ function App() {
               <form onSubmit={handleSubmit} noValidate="novalidate" style={{display: 'flex', width: '100%', justifyContent: 'center'}}>
                 {
                   !submitted ?
-                  <div className="formContainer">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Enter email address"
-                      onChange={handleChange}
-                      value={values.email}
-                    />
-                    <button type="submit" disabled={isSubmitting}>
-                      Get Notified
-                    </button>
+                  <div style={{display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center'}}>
+                    <div className="formContainer">
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter email address"
+                        onChange={handleChange}
+                        value={values.email}
+                      />
+                      <button type="submit" disabled={isSubmitting}>
+                        Get Notified
+                      </button>
+                    </div>
+                    <div className="errorContainer">
+                      {errors.email && touched.email ? <p className="errorText">Invalid Email</p> : null}
+                    </div>
                   </div>
                   :
                   <div className="registeredContainer">
                     <h2 className="registeredText">Thank you for registering! We will reach out once early access is available.</h2>
                   </div>
                 }
-                {errors.email && touched.email ? <p className="errorText">Invalid Email</p> : null}
               </form>
             )}
           </Formik>
