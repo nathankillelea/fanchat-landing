@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/fanchat-landing/static/css/main.61e73e67.chunk.css",
+    "main.js": "/fanchat-landing/static/js/main.57e48af2.chunk.js",
+    "main.js.map": "/fanchat-landing/static/js/main.57e48af2.chunk.js.map",
+    "runtime-main.js": "/fanchat-landing/static/js/runtime-main.685e5771.js",
+    "runtime-main.js.map": "/fanchat-landing/static/js/runtime-main.685e5771.js.map",
+    "static/js/2.0d89f4a3.chunk.js": "/fanchat-landing/static/js/2.0d89f4a3.chunk.js",
+    "static/js/2.0d89f4a3.chunk.js.map": "/fanchat-landing/static/js/2.0d89f4a3.chunk.js.map",
+    "static/js/3.124ac8b1.chunk.js": "/fanchat-landing/static/js/3.124ac8b1.chunk.js",
+    "static/js/3.124ac8b1.chunk.js.map": "/fanchat-landing/static/js/3.124ac8b1.chunk.js.map",
+    "index.html": "/fanchat-landing/index.html",
+    "static/css/main.61e73e67.chunk.css.map": "/fanchat-landing/static/css/main.61e73e67.chunk.css.map",
+    "static/js/2.0d89f4a3.chunk.js.LICENSE.txt": "/fanchat-landing/static/js/2.0d89f4a3.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/fanchat-landing/static/media/RobotoCondensed-Regular.db6d9169.ttf",
+    "static/media/phone-tilt.ef5b69f2.png": "/fanchat-landing/static/media/phone-tilt.ef5b69f2.png",
+    "static/media/phone.70243702.png": "/fanchat-landing/static/media/phone.70243702.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.685e5771.js",
+    "static/js/2.0d89f4a3.chunk.js",
+    "static/css/main.61e73e67.chunk.css",
+    "static/js/main.57e48af2.chunk.js"
+  ]
+}
