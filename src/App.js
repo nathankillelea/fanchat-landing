@@ -4,6 +4,8 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import firebase from "firebase/app";
 import "firebase/firestore";
+import tilt from './assets/phone-tilt.png';
+import phone from './assets/phone.png';
 
 let firebaseConfig = {
   apiKey: "AIzaSyATxICEk1ESEIVEV3B_CXjCuOcvs1X252E",
@@ -35,47 +37,50 @@ function App() {
 
   return (
     <div className="app">
-      <div className="backgroundImage" />
-      <div style={{maxWidth: '1000px', position: 'absolute'}}>
-        <header>
-          <h1><strong>fanchat</strong> is a subscription-based messaging platform for influencers and their fans.</h1>
-        </header>
-        <Formik
-          initialValues={{ email: '' }}
-          validationSchema={emailSchema}
-          onSubmit={(values, actions) => {
-            actions.setSubmitting(true);
-            submit(values);
-            actions.setSubmitting(false);
-            setSubmitted(true);
-          }}
-        >
-          {({ handleChange, setFieldTouched, handleSubmit, isSubmitting, values, errors, touched }) => (
-            <form onSubmit={handleSubmit} noValidate="novalidate" style={{display: 'flex', width: '100%', justifyContent: 'center'}}>
-              {
-                !submitted ?
-                <div className="formContainer">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter email address"
-                    onChange={handleChange}
-                    value={values.email}
-                  />
-                  <button type="submit" disabled={isSubmitting}>
-                    Get Notified
-                  </button>
-                </div>
-                :
-                <div>
-                  <h2 className="registeredText">Thank you for registering! We will reach out once early access is available.</h2>
-                </div>
-              }
-              {errors.email && touched.email ? <p className="errorText">Invalid Email</p> : null}
-            </form>
-          )}
-        </Formik>
+      <div className="diagonalBox">
+        <div className="content">
+          <header>
+            <h1><strong>fanchat</strong> is a subscription-based messaging platform for influencers and their fans.</h1>
+          </header>
+          <Formik
+            initialValues={{ email: '' }}
+            validationSchema={emailSchema}
+            onSubmit={(values, actions) => {
+              actions.setSubmitting(true);
+              submit(values);
+              actions.setSubmitting(false);
+              setSubmitted(true);
+            }}
+          >
+            {({ handleChange, setFieldTouched, handleSubmit, isSubmitting, values, errors, touched }) => (
+              <form onSubmit={handleSubmit} noValidate="novalidate" style={{display: 'flex', width: '100%', justifyContent: 'center'}}>
+                {
+                  !submitted ?
+                  <div className="formContainer">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter email address"
+                      onChange={handleChange}
+                      value={values.email}
+                    />
+                    <button type="submit" disabled={isSubmitting}>
+                      Get Notified
+                    </button>
+                  </div>
+                  :
+                  <div className="registeredContainer">
+                    <h2 className="registeredText">Thank you for registering! We will reach out once early access is available.</h2>
+                  </div>
+                }
+                {errors.email && touched.email ? <p className="errorText">Invalid Email</p> : null}
+              </form>
+            )}
+          </Formik>
+        </div>
       </div>
+      <img src={phone} className="phone" alt="fanchat application" />
+      <img src={tilt} className="tilt" alt="fanchat application" />
     </div>
   );
 }
